@@ -1,0 +1,3 @@
+Large Language Models (LLMs) are deep neural networks trained on vast amounts of text data. Examples include GPT, Gemini, Claude, and Llama.
+
+LLMs can perform tasks such as question answering, summarization, translation, coding assistance, and reasoning. They are often integrated with retrieval systems and external tools to improve performance.

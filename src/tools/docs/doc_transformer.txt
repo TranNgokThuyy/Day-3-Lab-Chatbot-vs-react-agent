@@ -1,0 +1,3 @@
+The Transformer architecture was introduced in the paper "Attention Is All You Need" in 2017.
+
+Transformers use self-attention mechanisms to process sequences efficiently and have become the foundation of modern large language models.

@@ -1,0 +1,3 @@
+Deep Learning is a subset of machine learning that uses neural networks with multiple layers.
+
+Applications include computer vision, speech recognition, natural language processing, and generative AI systems.

@@ -18,7 +18,7 @@ def main():
     ]
 
     provider = GeminiProvider(
-    model_name="gemini-1.5-flash",
+    model_name="gemini-2.5-flash",
     api_key=os.getenv("GEMINI_API_KEY")
 )
 
