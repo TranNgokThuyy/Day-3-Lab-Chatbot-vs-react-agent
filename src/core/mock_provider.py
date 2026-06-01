@@ -18,8 +18,18 @@ class MockProvider(LLMProvider):
         start = time.time()
         content = ""
 
-        # If an observation is present, produce a final answer
-        if "Observation:" in prompt:
+        # If the system prompt tells us not to use tools, answer directly.
+        if system_prompt and "without calling tools" in system_prompt.lower():
+            user_query = prompt.strip().split("\n")[-1]
+            user_query = user_query.replace('"', '').replace("'", "")
+            # Use local document search to simulate a direct chatbot answer without tool execution.
+            from src.tools.search_tool import search_documents
+            search_result = search_documents(user_query, top_k=2)
+            content = (
+                "Final Answer: I found relevant document excerpts for your query. "
+                "Here are the most relevant sources:\n" + search_result
+            )
+        elif "Observation:" in prompt:
             # Extract the last Observation
             obs_idx = prompt.rfind("Observation:")
             observation = prompt[obs_idx + len("Observation:"):].strip()
@@ -27,7 +37,7 @@ class MockProvider(LLMProvider):
         else:
             # Try to get a short query from the user prompt
             user_query = prompt.strip().split('\n')[-1]
-            user_query = user_query.replace('\"', '').replace('\'', '')
+            user_query = user_query.replace('"', '').replace("'", "")
             content = f"Thought: I should search for documents relevant to the user's query.\nAction: search_documents({user_query})"
 
         end = time.time()

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đinh Văn Thư</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <h1>TÌM KIẾM TÀI LIỆU</h1>
+          <p>So sánh chatbot baseline và agent có công cụ tìm kiếm tài liệu.</p>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="panel panel-input">
+          <h2>Truy vấn tìm tài liệu</h2>
+          <form method="post">
+            <textarea name="query" placeholder="Nhập câu hỏi của bạn...">{{ query }}</textarea>
+            <button type="submit">Chạy thử</button>
+          </form>
+        </section>
+
+        {% if baseline_answer or agent_answer %}
+        <section class="panel panel-results">
+          <div class="result-card baseline">
+            <h3>Baseline Chatbot</h3>
+            <pre>{{ baseline_answer }}</pre>
+          </div>
+
+          <div class="result-card agent">
+            <h3>ReAct Agent</h3>
+            <pre>{{ agent_answer }}</pre>
+          </div>
+        </section>
+        {% endif %}
+
+        {% if metrics %}
+        <section class="panel panel-metrics">
+          <h2>Metrics</h2>
+          <div class="metrics-grid">
+            {% for metric in metrics %}
+            <div class="metric-card">
+              <strong>{{ metric.provider }} / {{ metric.model }}</strong>
+              <p>Prompt: {{ metric.prompt_tokens }}</p>
+              <p>Completion: {{ metric.completion_tokens }}</p>
+              <p>Total: {{ metric.total_tokens }}</p>
+              <p>Latency: {{ metric.latency_ms }} ms</p>
+              <p>Cost estimate: ${{ '%.4f'|format(metric.cost_estimate) }}</p>
+            </div>
+            {% endfor %}
+          </div>
+        </section>
+        {% endif %}
+      </main>
+
+      <footer class="footer">
+        <p>Made for the Lab 3 demo. Giao diện đơn giản, đẹp và dễ dùng.</p>
+      </footer>
+    </div>
+  </body>
+</html>

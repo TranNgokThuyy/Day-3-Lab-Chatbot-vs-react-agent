@@ -61,6 +61,17 @@ python src/agent/run_demo.py
 
 This demo uses a local `MockProvider` and the `search_documents` tool to simulate a document search task.
 
+## 🎨 Web Interface
+A simple web UI is available for a prettier display of the results.
+
+```bash
+cd Day-3-Lab-Chatbot-vs-react-agent
+pip install -r requirements.txt
+uvicorn webapp:app --reload --port 5000
+```
+
+Then open http://127.0.0.1:5000 in your browser.
+
 ---
 
 *Happy Coding! Let's build agents that actually work.*

@@ -12,7 +12,7 @@ def main():
     tools = [
         {
             "name": "search_documents",
-            "description": "Search local documents for a query and return snippets.",
+            "description": "Search local xdocuments for a query and return snippets.",
             "fn": search_documents,
         }
     ]
