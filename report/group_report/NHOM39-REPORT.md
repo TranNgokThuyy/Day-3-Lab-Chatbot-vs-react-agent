@@ -1,7 +1,7 @@
 # Group Report: Lab 3 - Production-Grade Agentic System
 
-- **Team Name**: Tim Kiem Tai Lieu
-- **Team Members**: [Member 1, Member 2, Member 3]
+- **Team Name**: Nhóm 39
+- **Team Members**: [Trần Ngọc Thuỵ - 2A202600799, Trần Đức Tâm - 2A202600803]
 - **Deployment Date**: 2026-06-01
 
 ---
