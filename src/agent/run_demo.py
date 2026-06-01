@@ -12,13 +12,13 @@ def main():
     tools = [
         {
             "name": "search_documents",
-            "description": "Search local documents for a query and return snippets.",
+            "description": "Search local xdocuments for a query and return snippets.",
             "fn": search_documents,
         }
     ]
 
     provider = GeminiProvider(
-    model_name="gemini-1.5-flash",
+    model_name="gemini-2.5-flash",
     api_key=os.getenv("GEMINI_API_KEY")
 )
 

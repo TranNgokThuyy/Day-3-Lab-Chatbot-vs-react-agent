@@ -66,5 +66,3 @@
 
 ---
 
-> [!NOTE]
-> Đổi tên file thành `REPORT_[YourName].md` trước khi nộp nếu cần.

@@ -1,0 +1,3 @@
+Embeddings are numerical vector representations of data. Similar concepts are mapped to nearby locations in vector space.
+
+Embedding models such as Sentence Transformers, OpenAI Embeddings, and Gemini Embeddings are commonly used in semantic search and recommendation systems.

@@ -1,0 +1,3 @@
+A vector database stores embeddings generated from text, images, or other data types. Examples include FAISS, Pinecone, ChromaDB, Weaviate, and Milvus.
+
+Vector databases enable semantic search by comparing vector similarity instead of exact keyword matching.

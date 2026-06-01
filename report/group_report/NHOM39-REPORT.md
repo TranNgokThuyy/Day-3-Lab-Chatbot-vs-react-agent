@@ -1,7 +1,7 @@
 # Group Report: Lab 3 - Production-Grade Agentic System
 
 - **Team Name**: Nhóm 39
-- **Team Members**: [Trần Ngọc Thuỵ - 2A202600799, Trần Đức Tâm - 2A202600803]
+- **Team Members**: [Trần Đức Tâm - 2A202600803, Trần Ngọc Thuỵ - 2A202600799]
 - **Deployment Date**: 2026-06-01
 
 ---
