@@ -1,0 +1,3 @@
+Document search is the task of finding relevant documents given a user's query. Popular approaches include keyword matching, TF-IDF ranking, semantic search using embeddings, and retrieval-augmented generation (RAG) for combining search with LLMs.
+
+In this demo, we provide a simple keyword-based search tool to demonstrate how an agent can call tools to retrieve information.

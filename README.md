@@ -51,6 +51,16 @@ The code is designed as a **Production Prototype**. It includes:
 - **Robust Provider Pattern**: Easily extendable to any LLM API.
 - **Clean Skeletons**: Focus on the logic that matters—the agent's reasoning process.
 
+## ▶️ Running the Demo
+A comparison demo is available between the baseline chatbot and the ReAct agent.
+
+```bash
+cd Day-3-Lab-Chatbot-vs-react-agent
+python src/agent/run_demo.py
+```
+
+This demo uses a local `MockProvider` and the `search_documents` tool to simulate a document search task.
+
 ---
 
 *Happy Coding! Let's build agents that actually work.*
